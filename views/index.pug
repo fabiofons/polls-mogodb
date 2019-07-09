@@ -1,0 +1,22 @@
+html
+  head
+    title Polls using MongoBD
+  body
+  h1 Polls
+  if polls.length
+    table 
+      thead
+        tr
+          th Title
+          th Description
+      tbody
+      each poll in polls
+        tr
+          td #{poll.title}
+          td #{poll.description}
+          td
+            - let id = poll._id
+            a(href='/polls/delete/' + id) Remove
+
+  a(href="/polls/new") Create new Poll
+
