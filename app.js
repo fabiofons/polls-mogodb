@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const app = express();
 const Poll = require('./models/Poll');
 
-const uri = 'mongodb+srv://MrRobot:Cicl!sm0si5@makeitreal-uiiha.mongodb.net/test?retryWrites=true&w=majority'
+const uri = 'mongodb+srv://user:pass@makeitreal-uiiha.mongodb.net/test?retryWrites=true&w=majority'
 mongoose.connect(uri, { useNewUrlParser: true });
 
 app.set('view engine', 'pug');
